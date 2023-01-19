@@ -46,9 +46,13 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(flavors2){
+  const sliceArray = flavors2.slice();
+  return sliceArray;
 }
+
+
+
 
 
 
@@ -63,9 +67,15 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
- }
+function is31Flavors(flavors){
+//const includes.index = is31Flavors.index}
+//is31Flavors();
+  if (flavors.length===31) {
+    return true
+  } else { 
+    return false
+   }
+   }
 
 
 
@@ -82,9 +92,15 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(flavor, newFlavor){
+  flavor.unshift(newFlavor)
+  return flavor
  }
+ 
+// console.log(addFlavor(originalFlavors, "Rainbow Sherbert"))
+ 
+
+
 
 
 
@@ -100,9 +116,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(flavor){
+ flavor.pop();
+ return flavor
 }
+
+//  console.log(removeLastFlavor(originalFlavors))
 
 
 
@@ -118,10 +137,12 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(flavors3,index){
+  return flavors3[index]
+
 }
 
+//console.log(getFlavorByIndex(originalFlavors, 2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -138,9 +159,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(flavors4, flavorName){
+  const foundIndex = flavors4.indexOf(flavorName)
+  flavors4.splice(foundIndex, 1)
+  return flavors4
+ //  return remov.indexOf()
+  
 }
+console.log(removeFlavorByName(originalFlavors,'Rocky Road'))
 
 
 
@@ -163,10 +189,18 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
-}
+function filterByWord(flavorsArray, flavor){
+  const newArray = []
+  for(let i = 0; i < flavorsArray.length; i++) {
+    if(flavorsArray[i].includes(flavor)) {
+      newArray.push(flavorsArray[i])
+    }
 
+  }
+   return newArray
+  }
+
+  console.log(filterByWord(originalFlavors, 'Chocolate'))
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
@@ -181,7 +215,7 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(){
   /*code here*/
 }
 
